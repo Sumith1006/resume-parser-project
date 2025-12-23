@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd 
 import os
 resume_path = []
-base_dir = "/kaggle/input/resume-dataset"
+"./data" = "/kaggle/input/resume-dataset"
 
 
 for root , dirs ,  files in os.walk(base_dir):
@@ -11,8 +11,7 @@ for root , dirs ,  files in os.walk(base_dir):
 
           resume_path.append(os.path.join(root , file))
 
-!pip install docx2txt
-!pip install pdfplumber
+
 import docx2txt
 import pdfplumber
 
@@ -142,7 +141,7 @@ print(len(results))
 
  
 
-!pip install reportlab
+
 import json
 from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate , Paragraph , Spacer , PageBreak
